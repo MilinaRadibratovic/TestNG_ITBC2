@@ -8,8 +8,8 @@ import org.testng.asserts.SoftAssert;
 public class TestCalculator {
 	protected static SoftAssert sa = new SoftAssert();
 	protected static Calculator calc = new Calculator();
-	protected static Double[] addNumb = { 0.0, -10.01, -1.09, 0.0, 5.06, 9.99 };
-	protected static Double[] divNumb = { -3.3, -0.09, 4.02, 8.98347424, 9.9 };
+	protected static double[] addNumb = { 0.0, -10.01, -1.09, 0.0, 5.06, 9.99 };
+	protected static double[] divNumb = { -3.3, -0.09, 4.02, 8.98347424, 9.9 };
 	private static final double DELTA = 1e-9;
 
 	@BeforeMethod
@@ -53,7 +53,7 @@ public class TestCalculator {
 		double setNum = 9.99;
 		calc.setValue(setNum);
 		calc.div(0);
-		Assert.assertEquals(calc.getValue(), 9.99);
+		Assert.assertEquals(calc.getValue(), Double.NaN, "Error message should be displayed.");
 	}
 
 	@Test

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="rs.app.run.TestCalculator">
+      <class name="app.TestCalculator">
         <methods>
           <include name="returnToStartValue"/>
           <include name="divNumWithZero"/>
         </methods>
-      </class> <!-- rs.app.run.TestCalculator -->
+      </class> <!-- app.TestCalculator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
